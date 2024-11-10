@@ -66,10 +66,5 @@
   {
     "key": "ctrl+z",
     "command": "workbench.action.toggleZenMode"
-  },
-  {
-    "key": "space ,",
-    "command": "workbench.action.showAllEditors",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   }
 ]
