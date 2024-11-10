@@ -19,6 +19,11 @@
     "command": "workbench.action.togglePanel"
   },
   {
+    "key": "ctrl+shift+r",
+    "command": "workbench.action.terminal.rename",
+    "when": "terminalFocus"
+  },
+  {
     "key": "ctrl+shift+n",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus"
