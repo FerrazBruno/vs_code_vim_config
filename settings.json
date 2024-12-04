@@ -1,9 +1,11 @@
+
 {
     "editor.fontFamily": "'CaskaydiaCove NF', 'Hack Nerd Font'",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": -1,
     "editor.tabSize": 2,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
@@ -13,28 +15,27 @@
     "breadcrumbs.enabled": false,
     "editor.stickyScroll.enabled": false,
     "workbench.activityBar.location": "hidden",
-    "workbench.sideBar.location": "right",
     "calva.highlight.enableBracketColors": false,
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
     "window.commandCenter": false,
     "window.title": "${dirty}${activeEditorShort}",
-
+    "workbench.sideBar.location": "right",
     // VIM CONFIG
     "editor.lineNumbers": "relative",
     "vim.leader": "<Space>",
     "vim.hlsearch": true,
-    // TESTE
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
-
     "vim.normalModeKeyBindingsNonRecursive": [
         // NAVIGATION
         // switch b/w buffers
         { "before": ["<S-h>"], "commands": [":bprevious"] },
         { "before": ["<S-l>"], "commands": [":bnext"] },
+        { "before": ["<leader>", "t", "t"], "commands": [":tabnew"] },
+        { "before": ["<leader>", "t", "o"], "commands": [":tabo"] },
         // splits
         { "before": ["leader", "v"], "commands": [":vsplit"] },
         { "before": ["leader", "s"], "commands": [":split"] },
@@ -43,6 +44,11 @@
         { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
         { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
         { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
+        // MOVE FASTER UP AND DOWN
+        { "before": ["J"], "after": ["5", "j"]},
+        { "before": ["K"], "after": ["5", "k"]},
+        // JOINING LINES
+        { "before": ["<leader>", "j"], "after": ["J"]},
         // NICE TO HAVE
         { "before": ["leader", "w"], "commands": [":w!"] },
         { "before": ["leader", "q"], "commands": [":q!"] },
@@ -52,8 +58,12 @@
         { "before": ["<leader>", "c", "a"], "commands": ["editor.action.quickFix"] },
         { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
         { "before": ["leader", ","], "commands": ["workbench.action.showAllEditors"] },
-        { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
-        { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] }
+        // { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+        { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] },
+        // NO HIGLIGHTING
+        { "before": ["<leader>", "/"], "commands": [":noh"] },
+        // COMMAND PALETTE
+        { "before": ["<leader>", "p"], "commands": ["workbench.action.showCommands"]}
     ],
     "vim.visualModeKeyBindings": [
         // Stay in visual mode while indenting
@@ -67,6 +77,6 @@
     ],
     "vim.insertModeKeyBindings": [
         // Back to NORMAL mode
-        { "before": ["j", "j"], "after": ["<Esc>"] }
+        { "before": ["j", "k"], "after": ["<Esc>"] }
     ]
 }
