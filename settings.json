@@ -1,6 +1,6 @@
 
 {
-    "editor.fontFamily": "'CaskaydiaCove NF', 'Hack Nerd Font'",
+    "editor.fontFamily": "'FiraCode Nerd Font', 'Hack Nerd Font'",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -14,13 +14,12 @@
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "editor.stickyScroll.enabled": false,
-    "workbench.activityBar.location": "hidden",
     "calva.highlight.enableBracketColors": false,
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": false,
     "window.commandCenter": false,
     "window.title": "${dirty}${activeEditorShort}",
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
     // VIM CONFIG
     "editor.lineNumbers": "relative",
     "vim.leader": "<Space>",
@@ -77,6 +76,6 @@
     ],
     "vim.insertModeKeyBindings": [
         // Back to NORMAL mode
-        { "before": ["j", "k"], "after": ["<Esc>"] }
+        { "before": ["j", "j"], "after": ["<Esc>"] }
     ]
 }
