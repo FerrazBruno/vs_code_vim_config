@@ -1,10 +1,5 @@
 [
   {
-    "key": "shift+alt+\\",
-    "command": "workbench.action.toggleStatusbarVisibility"
-  },
-
-  {
     "key": "ctrl+shift+a",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
