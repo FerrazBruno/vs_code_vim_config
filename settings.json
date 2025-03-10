@@ -20,6 +20,7 @@
     "window.commandCenter": false,
     "window.title": "${dirty}${activeEditorShort}",
     "workbench.sideBar.location": "left",
+    "workbench.editor.enablePreview": false,
     // VIM CONFIG
     "editor.lineNumbers": "relative",
     "vim.leader": "<Space>",
